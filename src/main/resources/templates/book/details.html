@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <th:block th:replace="~{layout::link-css}"></th:block>
+  <th:block th:replace="~{layout::custom-css}"></th:block>
+  <title>Book Details</title>
+</head>
+<body>
+<th:block th:replace="~{layout::header}"></th:block>
+<div class="container">
+  <h1>Book Details</h1>
+  <div>
+    <img th:if="${book.getImageUrl() != null}" th:src="@{${book.getImageUrl()}}" alt="Book Image" width="200">
+  </div>
+  <div>
+    <h2 th:text="${book.getTitle()}"></h2>
+    <p><strong>Author:</strong> <span th:text="${book.getAuthor()}"></span></p>
+    <p><strong>Price:</strong> <span th:text="${book.getPrice()}"></span></p>
+    <p><strong>Category:</strong> <span th:text="${book.getCategory().getName()}"></span></p>
+    <p><strong>Description:</strong> <span th:text="${book.getDescription()}"></span></p>
+  </div>
+  <a th:href="@{/books}" class="btn btn-primary">Back to List</a>
+</div>
+<th:block th:replace="~{layout::footer}"></th:block>
+</body>
+</html>

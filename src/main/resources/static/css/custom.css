@@ -1,0 +1,18 @@
+/* custom.css */
+
+/* Tùy chỉnh hiển thị thông báo nổi (toast) */
+.toast {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.toast .toast-header {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.toast .toast-header .close {
+    color: #fff;
+}
+
+/* Bất kỳ tùy chỉnh giao diện khác nếu cần */
